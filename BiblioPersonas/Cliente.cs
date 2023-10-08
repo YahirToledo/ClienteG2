@@ -11,36 +11,17 @@
 
         #region Propiedades
 
-        public string Nombre 
-        { 
-            get => nombre; 
-            set 
-            {
-                if (value == "")
-                {
-                    nombre = "Anonimo";
-                }
-                else
-                {
-                    nombre = value;
-                }
-            }
-            
+        public string Nombre { get => nombre;
+            set => nombre = value == "" ? "Anonimo" : value; 
         }
-        public string Telefono 
-        { 
-            get => telefono; 
-            set => telefono = value; 
+        public string Telefono { get => telefono; 
+            set => telefono = value == "" ? "5564215987" : value; 
         }
-        public byte Edad 
-        { 
-            get => edad; 
-            set => edad = value; 
+        public byte Edad { get => edad; 
+            set => edad = value < 13 || value > 100 ? (byte)18 : value; 
         }
-        public string Direccion 
-        { 
-            get => direccion; 
-            set => direccion = value; 
+        public string Direccion { get => direccion; 
+            set => direccion = value == "" ? "CDMX" : value; 
         }
         #endregion
 
