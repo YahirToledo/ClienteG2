@@ -15,18 +15,6 @@ namespace ClienteG2
         #region Propiedades
         public int Indice { get => indice; 
             set => indice = personas.Count > 0 && value < personas.Count ? value : 0;
-                /*
-            {
-                if (personas.Count > 0 && value < personas.Count)
-                {
-                    indice = value;
-                }
-                else 
-                {
-                    indice = 0;
-                }
-            }
-                */
         }
         #endregion
 
